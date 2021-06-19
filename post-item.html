@@ -52,30 +52,7 @@
                                  <a href="index.html" aria-label="Toggle navigation">Home</a>
                               </li>
                               <li class="nav-item">
-                                 <a href="category.html" aria-label="Toggle navigation">Categories</a>
-                              </li>
-                              <li class="nav-item">
-                                 <a class=" dd-menu collapsed" href="javascript:void(0)" data-bs-toggle="collapse" data-bs-target="#submenu-1-3" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">Dashboard</a>
-                                 <ul class="sub-menu collapse" id="submenu-1-3">
-                                    <li class="nav-item"><a href="dashboard.html">Account Overview</a></li>
-                                    <li class="nav-item"><a href="profile-settings.html">My Profile</a></li>
-                                    <li class="nav-item"><a href="my-items.html">My Ads</a></li>
-                                    <li class="nav-item"><a href="favourite-items.html">Favorite Ads</a></li>
-                                    <li class="nav-item active"><a href="post-item.html">Ad post</a></li>
-                                    <li class="nav-item"><a href="bookmarked-items.html">Bookmarked Ad</a></li>
-                                    <li class="nav-item"><a href="messages.html">Messages</a></li>
-                                    <li class="nav-item"><a href="invoice.html">Invoice</a></li>
-                                 </ul>
-                              </li>
-                           </ul>
-                        </div>
-                        <div class="login-button">
-                           <ul>
-                              <li>
-                                 <a href="login.html"><i class="lni lni-enter"></i> Login</a>
-                              </li>
-                              <li>
-                                 <a href="registration.html"><i class="lni lni-user"></i> Register</a>
+                                 <a href="category.php" aria-label="Toggle navigation">Categories</a>
                               </li>
                            </ul>
                         </div>
@@ -108,33 +85,7 @@
       <section class="dashboard section">
          <div class="container">
             <div class="row">
-               <div class="col-lg-3 col-md-4 col-12">
-                  <div class="dashboard-sidebar">
-                     <div class="user-image">
-                        <img src="assets/images/dashboard/user-image.jpg" alt="#">
-                        <h3>Steve Aldridge
-                           <span><a href="javascript:void(0)">@username</a></span>
-                        </h3>
-                     </div>
-                     <div class="dashboard-menu">
-                        <ul>
-                           <li><a href="dashboard.html"><i class="lni lni-dashboard"></i> Dashboard</a></li>
-                           <li><a href="profile-settings.html"><i class="lni lni-pencil-alt"></i> Edit Profile</a></li>
-                           <li><a href="my-items.html"><i class="lni lni-bolt-alt"></i> My Ads</a></li>
-                           <li><a href="favourite-items.html"><i class="lni lni-heart"></i> Favourite ads</a></li>
-                           <li><a class="active" href="post-item.html"><i class="lni lni-circle-plus"></i> Post An
-                              Ad</a>
-                           </li>
-                           <li><a href="bookmarked-items.html"><i class="lni lni-bookmark"></i> Bookmarked</a></li>
-                           <li><a href="messages.html"><i class="lni lni-envelope"></i> Messages</a></li>
-                           <li><a href="invoice.html"><i class="lni lni-printer"></i> Invoice</a></li>
-                        </ul>
-                        <div class="button">
-                           <a class="btn" href="javascript:void(0)">Logout</a>
-                        </div>
-                     </div>
-                  </div>
-               </div>
+               
                <div class="col-lg-9 col-md-8 col-12">
                   <div class="main-content">
                      <div class="dashboard-block mt-0">
@@ -160,81 +111,72 @@
                                     </button>
                                  </div>
                               </nav>
+                           <form action="insert.php" class="default-form-style" method="POST">
                               <div class="tab-content" id="nav-tabContent">
                                  <div class="tab-pane fade show active" id="nav-item-info" role="tabpanel" aria-labelledby="nav-item-info-tab">
                                     <div class="step-one-content">
-                                       <form class="default-form-style" method="post" action="#">
                                           <div class="row">
                                              <div class="col-12">
                                                 <div class="form-group">
-                                                   <label>Add Title*</label>
+                                                   <label>Add Title</label>
                                                    <input name="title" type="text" placeholder="Enter Title">
                                                 </div>
                                              </div>
                                              <div class="col-12">
                                                 <div class="form-group">
-                                                   <label>Category*</label>
+                                                   <label>Category</label>
                                                    <div class="selector-head">
                                                       <span class="arrow"><i class="lni lni-chevron-down"></i></span>
-                                                      <select class="user-chosen-select">
-                                                         <option value="none">Select a Category</option>
-                                                         <option value="none">Mobile Phones</option>
-                                                         <option value="none">Electronics</option>
-                                                         <option value="none">Computers</option>
-                                                         <option value="none">Headphones</option>
-                                                         <option value="none">Furnitures</option>
-                                                         <option value="none">Books</option>
+                                                      <select name="category" class="user-chosen-select">
+                                                         <option value="Outdoor">Outdoor</option>
+                                                         <option value="Tutoring">Tutoring</option>
+                                                         <option value="Digital">Digital</option>
+                                                         <option value="Caretaking">Caretaking</option>
+                                                         <option value="Housework">Housework</option>
+                                                         <option value="Assistance">Assistance</option>
+                                                         <option value="Miscellaneous">Miscellaneous</option>
                                                       </select>
                                                    </div>
                                                 </div>
                                              </div>
-                                             <div class="col-12">
-                                                <div class="form-group button mb-0">
-                                                   <button type="submit" class="btn ">Next Step</button>
-                                                </div>
-                                             </div>
                                           </div>
-                                       </form>
                                     </div>
                                  </div>
                                  <div class="tab-pane fade" id="nav-item-details" role="tabpanel" aria-labelledby="nav-item-details-tab">
                                     <div class="step-two-content">
-                                       <form class="default-form-style" method="post" action="#">
                                           <div class="row">
                                              <div class="col-12">
                                                 <div class="form-group">
-                                                   <label>Add Price*</label>
+                                                   <label>Add Price</label>
                                                    <input name="price" type="text" placeholder="Enter Price">
                                                 </div>
                                              </div>
                                              <div class="col-12">
                                                 <div class="form-group">
-                                                   <label>Price Type*</label>
+                                                   <label>Price Type</label>
                                                    <div class="selector-head">
                                                       <span class="arrow"><i class="lni lni-chevron-down"></i></span>
-                                                      <select class="user-chosen-select">
-                                                         <option value="none">Select an option</option>
-                                                         <option value="none">Fixed</option>
-                                                         <option value="none">Price On Call</option>
-                                                      </select>
-                                                   </div>
-                                                </div>
-                                             </div>
-                                             <div class="col-12">
-                                                <div class="form-group">
-                                                   <label>Select Currency*</label>
-                                                   <div class="selector-head">
-                                                      <span class="arrow"><i class="lni lni-chevron-down"></i></span>
-                                                      <select class="user-chosen-select">
-                                                         <option value="none">Select an option</option>
-                                                         <option value="none">Dollar</option>
-                                                         <option value="none">Euro</option>
-                                                         <option value="none">Rupee</option>
+                                                      <select name="price_type" class="user-chosen-select">
+                                                         <option value="fixed">Fixed</option>
+                                                         <option value="hourly">Price Per Hour</option>
                                                       </select>
                                                    </div>
                                                 </div>
                                              </div>
                                              <div class="col-lg-6 col-12">
+                                                <div class="form-group">
+                                                   <label>Time</label>
+                                                   <input name="time" type="text" placeholder="Enter time" id="theCityOfAdvertiser">
+                                                </div>
+                                             </div>
+                                             <div class="col-lg-6 col-12">
+                                                <div class="form-group">
+                                                   <label>Date</label>
+                                                   <input name="date" type="text" placeholder="Enter date" id="theDate">
+                                                </div>
+                                             </div>
+                                          <!--   <div class="col-lg-6 col-12">
+                                                <label>Image</label>
                                                 <div class="upload-input">
                                                    <input type="file" id="upload" name="upload">
                                                    <label for="upload" class="text-center content">
@@ -249,181 +191,59 @@
                                                    </span>
                                                    </label>
                                                 </div>
-                                             </div>
-                                             <div class="col-lg-6 col-12">
+                                             </div> -->
+                                             <div class="col-lg-12 col-12">
                                                 <div class="form-group">
-                                                   <label class="video-label">Video Link* <span>Input only
-                                                   YouTube & Vimeo</span></label>
-                                                   <input name="video" type="text" placeholder="Input link">
-                                                   <a href="javascript:void(0)" class="add-video"><i class="lni lni-plus"></i> Add Video</a>
+                                                   <label>RAW Image URL</label>
+                                                   <input name="image" type="text" placeholder="Enter the raw image URL" id="theImage">
                                                 </div>
                                              </div>
                                              <div class="col-12">
                                                 <div class="form-group mt-30">
-                                                   <label>Ad Description*</label>
-                                                   <textarea name="message" placeholder="Input ad description"></textarea>
-                                                </div>
-                                             </div>
-                                             <div class="col-lg-6 col-12">
-                                                <div class="form-group">
-                                                   <label>Type of Ad*</label>
-                                                   <div class="selector-head">
-                                                      <span class="arrow"><i class="lni lni-chevron-down"></i></span>
-                                                      <select class="user-chosen-select">
-                                                         <option value="none">Select an option</option>
-                                                         <option value="none">Option 1</option>
-                                                         <option value="none">Option 2</option>
-                                                         <option value="none">Option 3</option>
-                                                      </select>
-                                                   </div>
-                                                </div>
-                                             </div>
-                                             <div class="col-lg-6 col-12">
-                                                <div class="form-group">
-                                                   <label>Item Condition*</label>
-                                                   <div class="selector-head">
-                                                      <span class="arrow"><i class="lni lni-chevron-down"></i></span>
-                                                      <select class="user-chosen-select">
-                                                         <option value="none">Select an option</option>
-                                                         <option value="none">Used</option>
-                                                         <option value="none">Brand New</option>
-                                                      </select>
-                                                   </div>
-                                                </div>
-                                             </div>
-                                             <div class="col-12">
-                                                <div class="form-group">
-                                                   <label class="tag-label">Tags* <span>Comma(,)
-                                                   separated</span></label>
-                                                   <input name="tag" type="text" placeholder="Type Product tag">
-                                                </div>
-                                             </div>
-                                             <div class="col-12">
-                                                <div class="form-group button mb-0">
-                                                   <button type="submit" class="btn alt-btn">Previous</button>
-                                                   <button type="submit" class="btn ">Next Step</button>
+                                                   <label>Ad Description</label>
+                                                   <textarea name="description" placeholder="Input ad description"></textarea>
                                                 </div>
                                              </div>
                                           </div>
-                                       </form>
                                     </div>
                                  </div>
                                  <div class="tab-pane fade" id="nav-user-info" role="tabpanel" aria-labelledby="nav-user-info-tab">
                                     <div class="step-three-content">
-                                       <form class="default-form-style" method="post" action="#">
                                           <div class="row">
                                              <div class="col-lg-6 col-12">
                                                 <div class="form-group">
-                                                   <label>Name*</label>
+                                                   <label>Name</label>
                                                    <input name="name" type="text" placeholder="Enter your name">
                                                 </div>
                                              </div>
                                              <div class="col-lg-6 col-12">
                                                 <div class="form-group">
-                                                   <label>Mobile Numbe*</label>
-                                                   <input name="number" type="text" placeholder="Enter mobile number">
+                                                   <label>Mobile Number</label>
+                                                   <input name="phone" type="text" placeholder="Enter mobile number">
                                                 </div>
                                              </div>
                                              <div class="col-12">
                                                 <div class="form-group">
-                                                   <label>Country*</label>
-                                                   <div class="selector-head">
-                                                      <span class="arrow"><i class="lni lni-chevron-down"></i></span>
-                                                      <select class="user-chosen-select">
-                                                         <option value="none">Select a Country</option>
-                                                         <option value="none">Afghanistan</option>
-                                                         <option value="none">America</option>
-                                                         <option value="none">Albania</option>
-                                                         <option value="none">Bangladesh</option>
-                                                         <option value="none">Brazil</option>
-                                                         <option value="none">India</option>
-                                                         <option value="none">South Africa</option>
-                                                      </select>
-                                                   </div>
-                                                </div>
-                                             </div>
-                                             <div class="col-lg-6 col-12">
-                                                <div class="form-group">
-                                                   <label>Select City*</label>
-                                                   <div class="selector-head">
-                                                      <span class="arrow"><i class="lni lni-chevron-down"></i></span>
-                                                      <select class="user-chosen-select">
-                                                         <option value="none">Select City</option>
-                                                         <option value="none">New York</option>
-                                                         <option value="none">Los Angeles</option>
-                                                         <option value="none">Chicago</option>
-                                                         <option value="none">San Diego</option>
-                                                         <option value="none">San Jose</option>
-                                                      </select>
-                                                   </div>
-                                                </div>
-                                             </div>
-                                             <div class="col-lg-6 col-12">
-                                                <div class="form-group">
-                                                   <label>Select State*</label>
-                                                   <div class="selector-head">
-                                                      <span class="arrow"><i class="lni lni-chevron-down"></i></span>
-                                                      <select class="user-chosen-select">
-                                                         <option value="none">Select State</option>
-                                                         <option value="none">New York</option>
-                                                         <option value="none">Texas</option>
-                                                         <option value="none">Arizona</option>
-                                                         <option value="none">Florida</option>
-                                                         <option value="none">Washington</option>
-                                                      </select>
-                                                   </div>
+                                                   <label>Email</label>
+                                                   <input name="email" type="text" placeholder="Enter your email" id="emailOfAdvertiser">
                                                 </div>
                                              </div>
                                              <div class="col-12">
                                                 <div class="form-group">
-                                                   <label>Address*</label>
+                                                   <label>Address</label>
                                                    <input name="address" type="text" placeholder="Enter a location">
                                                 </div>
                                              </div>
                                              <div class="col-12">
-                                                <div class="google-map">
-                                                   <div class="mapouter">
-                                                      <div class="gmap_canvas">
-                                                         <iframe width="100%" height="300" id="gmap_canvas" src="https://maps.google.com/maps?q=2880%20Broadway,%20New%20York&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://123movies-to.org"></a><br>
-                                                         <style>
-                                                            .mapouter {
-                                                            position: relative;
-                                                            text-align: right;
-                                                            height: 300px;
-                                                            width: 100%;
-                                                            }
-                                                         </style>
-                                                         <a href="https://www.embedgooglemap.net">embed
-                                                         google maps wordpress</a>
-                                                         <style>
-                                                            .gmap_canvas {
-                                                            overflow: hidden;
-                                                            background: none !important;
-                                                            height: 300px;
-                                                            width: 100%;
-                                                            }
-                                                         </style>
-                                                      </div>
-                                                   </div>
-                                                </div>
-                                             </div>
-                                             <div class="col-12">
-                                                <div class="form-check">
-                                                   <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                                   <label class="form-check-label" for="flexCheckDefault">
-                                                   I agree to all Terms of Use & Posting Rules
-                                                   </label>
-                                                </div>
                                                 <div class="form-group button mb-0">
-                                                   <button type="submit" class="btn alt-btn">Previous</button>
-                                                   <button type="submit" class="btn ">Submit Ad</button>
+                                                   <button name="submit" value="submit" class="btn ">Submit Ad</button>
                                                 </div>
                                              </div>
                                           </div>
-                                       </form>
                                     </div>
                                  </div>
                               </div>
+                              </form>
                            </div>
                         </div>
                      </div>
@@ -431,8 +251,7 @@
                </div>
             </div>
          </div>
-      </section>
-      
+      </section> 
       <a href="#" class="scroll-top btn-hover">
       <i class="lni lni-chevron-up"></i>
       </a>
